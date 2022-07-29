@@ -1,0 +1,24 @@
+{
+  "name": "vue3-component",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -C play dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wy/components": "workspace:*",
+    "@wy/theme": "workspace:*",
+    "@wy/utils": "workspace:*",
+    "typescript": "^4.7.4",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "unplugin-vue-define-options": "^0.6.2"
+  }
+}

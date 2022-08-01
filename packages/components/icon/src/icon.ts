@@ -5,5 +5,6 @@ export const iconProps ={
   size:[Number,String] as PropType<number|string>
 } as const
 
+// TODO:我不知道这句话是干啥的，好像没有这句话也可以
 type iconProps = ExtractPropTypes<typeof iconProps>
 

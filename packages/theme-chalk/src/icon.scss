@@ -1,0 +1,6 @@
+@use 'mixin/mixins' as *;
+@include b(icon) {
+  display: inline-flex;
+  height: 1em;
+  vertical-align: middle;
+}

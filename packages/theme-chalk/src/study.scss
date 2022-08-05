@@ -1,0 +1,62 @@
+// 是一种编译语言 编译结果是 css
+
+// 变量具有作用域 创建相同得变量，遵循js得原则
+$h1color:red; //创建变量
+$deColor: red !default; // 不依赖于导入顺序 会使这个变量降级，优先使用其他相同变量名得
+$size:10px;
+h1{
+  background:$h1color;
+  $ulColor:red;  // 作用域变量
+  color:$ulColor;
+  border: $size * 5 solid $ulColor;
+  .nav &{
+    text-decoration: dashed;      // 选择器嵌套 => .nav h1{}
+  }
+  &:nth-child(1){
+    color:red;    // => h1:nth-child((1)) 可以把&理解为替代层级到当前元素得上一级
+    width: (50px / 2) // 除法最好使用括号
+  }
+}
+
+@mixin blockOrHidden($width:100px) {
+  @if $width > 500px {
+    display: block;
+  }
+  @else if $width < 500px {
+    display: none;
+  }
+  @else {
+    color: red
+  }
+}
+h1 {
+  @include blockOrHidden(1000px);
+}
+
+$list:a b c d;
+// from...to... => [)
+// from...through... =>[]
+@mixin setOffset($elementPre,$num,$offset) {
+  // @for $i from 1 through $num {
+  //   #{$elementPre + $i} {
+  //     top:-($i - 1)*$offset
+  //   }
+  // }
+  $count:1;
+  @while count <= $num {
+    #{$elementPre + $i} {
+      top:-($i - 1)*$offset;
+    }
+    $count:$count + 1;
+  }
+  @each $item in $list {
+    .#{$item} {
+      color:red;
+    }
+  }
+  // index($list,$item) 返回item在list中得索引
+
+}
+ul{
+  @include setOffset('.list', 5, 50px);
+}

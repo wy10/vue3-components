@@ -1,12 +1,18 @@
-<script setup lang="ts">
-</script>
+<template>
+  <w-icon :color="iconStyle.color" :size="iconStyle.size" ><AddCircle style="width: 50px;"></AddCircle></w-icon>
+</template>
 
 <script setup lang="ts">
 import { AddCircle } from '@vicons/ionicons5'
+import { IconProps } from '@wy/components/icon'
+import { computed } from 'vue'
+const iconStyle:IconProps = computed(()=>{
+  return {
+    color:'green',
+    size:'20'
+  }
+})
 </script>
-<template>
-  <w-icon :color="'red'" :size="40"><AddCircle style="width: 50px;"></AddCircle></w-icon>
-</template>
 
 <style scoped>
 .logo {

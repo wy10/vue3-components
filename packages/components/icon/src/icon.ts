@@ -5,6 +5,5 @@ export const iconProps ={
   size:[Number,String] as PropType<number|string>
 } as const
 
-// TODO:我不知道这句话是干啥的，好像没有这句话也可以
-type iconProps = ExtractPropTypes<typeof iconProps>
-
+// 抽离对象类型 从iconProps中推断出该有的类型
+export type IconProps = ExtractPropTypes<typeof iconProps>

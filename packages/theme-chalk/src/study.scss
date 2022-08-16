@@ -36,6 +36,7 @@ h1 {
 $list:a b c d;
 // from...to... => [)
 // from...through... =>[]
+// #{}用于选择器
 @mixin setOffset($elementPre,$num,$offset) {
   // @for $i from 1 through $num {
   //   #{$elementPre + $i} {

@@ -1,4 +1,4 @@
-import { Plugin } from "vue";
+import { Plugin } from "vue"; // Plugin类型带有install方法
 export type SFCWithInstall<T> = T & Plugin
 export function withInstall<T>(comp:T) {
   (comp as SFCWithInstall<T>).install = function(app) {

@@ -16,6 +16,8 @@
     "@wy/components": "workspace:*",
     "@wy/theme": "workspace:*",
     "@wy/utils": "workspace:*",
+    "deepcopy": "^2.1.0",
+    "element-plus": "^2.2.14",
     "typescript": "^4.7.4",
     "vue": "^3.2.37"
   },

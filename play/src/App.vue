@@ -1,17 +1,22 @@
 <template>
   <w-icon :color="iconStyle.color" :size="iconStyle.size" ><AddCircle style="width: 50px;"></AddCircle></w-icon>
+  <w-editor v-model="state"></w-editor>
 </template>
 
 <script setup lang="ts">
 import { AddCircle } from '@vicons/ionicons5'
 import { IconProps } from '@wy/components/icon'
-import { computed } from 'vue'
+import { computed,provide,ref } from 'vue'
+import data from './data.json'
+import { registerConfig } from "./editor-config";
 const iconStyle:IconProps = computed(()=>{
   return {
     color:'green',
     size:'20'
   }
 })
+const state = ref(data)
+provide('config',registerConfig)
 </script>
 
 <style scoped>

@@ -4,6 +4,7 @@ export type blockType = {
   width:number,
   height:number,
   zIndex:number,
+  focus:boolean,
   alignCenter:boolean,
   key:string,
 } 

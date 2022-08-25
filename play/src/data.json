@@ -4,8 +4,8 @@
     "height": 800
   },
   "blocks": [
-    {"top":10,"left":10,"width":0,"height":0,"zIndex":1,"alignCenter":false,"key":"text"},
-    {"top":50,"left":10,"width":0,"height":0,"zIndex":1,"alignCenter":false,"key":"button"},
-    {"top":100,"left":10,"width":0,"height":0,"zIndex":1,"alignCenter":false,"key":"input"}
+    {"top":10,"left":10,"width":0,"height":0,"zIndex":1,"focus":false,"alignCenter":false,"key":"text"},
+    {"top":50,"left":10,"width":0,"height":0,"zIndex":1,"focus":false,"alignCenter":false,"key":"button"},
+    {"top":100,"left":10,"width":0,"height":0,"zIndex":1,"focus":false,"alignCenter":false,"key":"input"}
   ]
 }
